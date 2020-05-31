@@ -1,14 +1,14 @@
 ---
 title: 02 - OSI Model and TCP/IP Model
 created: '2020-05-31T17:18:59.178Z'
-modified: '2020-05-31T21:02:28.123Z'
+modified: '2020-05-31T21:16:16.974Z'
 ---
 
 # 02 - OSI Model and TCP/IP Model
 
 - The **I**nternational **O**rganization for **S**tandardization (ISO) is responsible for making stardards different devices can rely on for communicating.
 
-- The **O**pen **S**ystems **I**nterconnection model (OSI model) was competing against the TCP/IP model, of which the latter became the industry standard. Both provide us with a layered approach to the network.
+- The **O**pen **S**ystems **I**nterconnection (OSI) model supported by ISO was competing against the TCP/IP model supported by the US Department of Defense. The latter became the industry standard. Both provide us with a layered approach to the network.
 
 ## The OSI and TCP/IP model
 
@@ -56,7 +56,7 @@ TCP/IP Layers (1) to (3) are critical for a network engineer.
 	<tr>
 		<td>Bit</td>
 		<td>(1) Physical</td>
-		<td>Actual data transfer (wires, cables etc)</td>
+		<td>Actual data transfer (wires, cables, etc)</td>
 	</tr>
 </table>
 

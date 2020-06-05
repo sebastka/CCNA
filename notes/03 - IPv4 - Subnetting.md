@@ -26,6 +26,7 @@ Possible configurations:
   <thead>
     <tr>
       <th>Borrowed bits</th>
+      <th>0</th>
       <th>1</th>
       <th>2</th>
       <th>3</th>
@@ -35,17 +36,19 @@ Possible configurations:
     </tr>
   </thead>
   <tbody>
-    <tr>
-    	<th>Mask Value</th>
+      <tr>
+    	<th>Block Size</th>
+        <td>256</th>
     	<td>128</td>
-    	<td>192</td>
-    	<td>224</td>
-    	<td>240</td>
-    	<td>248</td>
-    	<td>252</td>
+    	<td>64</td>
+    	<td>32</td>
+    	<td>16</td>
+    	<td>8</td>
+    	<td>4</td>
     </tr>
     <tr>
     	<th>Subnets</th>
+        <td>0</th>
     	<td>2</td>
     	<td>4</td>
     	<td>8</td>
@@ -55,6 +58,7 @@ Possible configurations:
     </tr>
     <tr>
     	<th>Hosts</th>
+        <td>254</th>
     	<td>126</td>
     	<td>62</td>
     	<td>30</td>
@@ -64,6 +68,7 @@ Possible configurations:
     </tr>
     <tr>
     	<th>CIDR</th>
+        <td>/24</th>
     	<td>/25</td>
     	<td>/26</td>
     	<td>/27</td>
@@ -72,21 +77,23 @@ Possible configurations:
     	<td>/30</td>
     </tr>
     <tr>
-    	<th>Block Size</th>
+    	<th>Mask Value</th>
+        <td>255</th>
     	<td>128</td>
-    	<td>64</td>
-    	<td>32</td>
-    	<td>16</td>
-    	<td>8</td>
-    	<td>4</td>
+    	<td>192</td>
+    	<td>224</td>
+    	<td>240</td>
+    	<td>248</td>
+    	<td>252</td>
     </tr>
   </tbody>
 </table>
 
 ### Example
 
-- **IP Address**: 192.168.100.225
-- **Subnet mask**: 255.255.255.192
-- Subnet mask: 11111111.11111111.11111111.11000000
+- **Question**: Find the NID and BID of the following IP Address: 192.168.225.212/27.
 
-There are now four subnets with 2^6 - 2 = 62 available hosts. CIDR notation: 192.168.100.0/26.
+The CIDR notation indicates a binary subnet mask with 27 ones, meaning three borrowed bits:
+- Subnet mask (binary): 11111111.11111111.11111111.11100000
+
+Three borrowed bits give a block size of 32, thus 30 hosts in every 8 subnets:

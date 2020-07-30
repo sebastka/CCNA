@@ -1,7 +1,7 @@
 ---
 title: 03 - IPv4 - Subnetting
 created: '2020-05-31T22:43:46.470Z'
-modified: '2020-06-01T08:19:14.071Z'
+modified: '2020-06-07T13:56:38.822Z'
 ---
 
 # 03 - IPv4 - Subnetting
@@ -9,6 +9,8 @@ modified: '2020-06-01T08:19:14.071Z'
 The need for subnetting arouse when it was realized there won't be enough IP addresses for every device on the network. **Public** and **private** IP addresses then appeared.
 
 When **subnetting**, one uses **C**lassless **I**nter-**D**omain **R**outing (CIDR) notation. 
+
+The **Broadcast ID** or **Broadcast Address** is used to send data to all devices on a specific network. The entire host portion is populated with binary 1s, so 255.
 
 ## Class C Subnetting
 To devide a network in two subnets, one can make use of a special subnet mask:
@@ -36,9 +38,9 @@ Possible configurations:
     </tr>
   </thead>
   <tbody>
-      <tr>
+    <tr>
     	<th>Block Size</th>
-        <td>256</th>
+      <td>256</td>
     	<td>128</td>
     	<td>64</td>
     	<td>32</td>
@@ -48,7 +50,7 @@ Possible configurations:
     </tr>
     <tr>
     	<th>Subnets</th>
-        <td>0</th>
+      <td>0</td>
     	<td>2</td>
     	<td>4</td>
     	<td>8</td>
@@ -58,7 +60,7 @@ Possible configurations:
     </tr>
     <tr>
     	<th>Hosts</th>
-        <td>254</th>
+      <td>254</td>
     	<td>126</td>
     	<td>62</td>
     	<td>30</td>
@@ -68,7 +70,7 @@ Possible configurations:
     </tr>
     <tr>
     	<th>CIDR</th>
-        <td>/24</th>
+      <td>/24</td>
     	<td>/25</td>
     	<td>/26</td>
     	<td>/27</td>
@@ -78,7 +80,7 @@ Possible configurations:
     </tr>
     <tr>
     	<th>Mask Value</th>
-        <td>255</th>
+      <td>255</td>
     	<td>128</td>
     	<td>192</td>
     	<td>224</td>
@@ -96,4 +98,7 @@ Possible configurations:
 The CIDR notation indicates a binary subnet mask with 27 ones, meaning three borrowed bits:
 - Subnet mask (binary): 11111111.11111111.11111111.11100000
 
-Three borrowed bits give a block size of 32, thus 30 hosts in every 8 subnets:
+Three borrowed bits give a block size of 32, thus 30 hosts in each one of the eight subnets:
+![Subnet diagram](../images/Subnet27.png)
+
+The blue text indicates the **N**etwork **ID**s, the red text indicates the **B**roadcast **ID**s. The IP Address above lies in subnet S<sub>7</sub>, with NID 192.168.225.192 and BID 192.168.225.223.

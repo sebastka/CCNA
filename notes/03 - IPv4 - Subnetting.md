@@ -98,7 +98,7 @@ Possible configurations:
 The CIDR notation indicates a binary subnet mask with 27 ones, meaning three borrowed bits:
 - Subnet mask (binary): 11111111.11111111.11111111.11100000
 
-Three borrowed bits give a block size of 32, thus 30 hosts in each one of the eight subnets:
+Three borrowed bits mean 5 zero-bits and this gives a block size of 2^5 - 2 = 30 hosts in each one of the eight subnets:
 ![Subnet diagram](../images/Subnet27.png)
 
 The blue text indicates the **N**etwork **ID**s, the red text indicates the **B**roadcast **ID**s. The IP Address above lies in subnet S<sub>7</sub>, with NID 192.168.225.192 and BID 192.168.225.223.
